@@ -2,50 +2,30 @@
 <html lang="en">
 
 <head>
-  <title>Ray</title>
-
+  <title>Ray's Porfolio</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link  rel="stylesheet" href="assets/open-iconic/font/css/open-iconic-bootstrap.css">
 </head>
 
 <body>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light d-block d-sm-none">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light d-block d-lg-none" style="min-height: 80px;">
     <a class="navbar-brand" href="#">RAY</a>
-    <button class="btn navbar-toggler float-right" type="button" data-toggle="modal" data-target="#modalMenu" aria-hidden="false">M</button>
+    <button class="modal float-right" type="button" data-toggle="modal" data-target="#modalMenu" aria-hidden="false">
+      <span class="oi oi-menu"></span>
+    </button>
 
-    <div class="modal fade modal" id="modalMenu" role="dialog" aria-hidden="true">
-
-      <button class="btn float-right" type="button" data-dismiss="modal">X</button>
-
-      <div class="modal-dialog bg-warning mx-auto">
-        <a class="nav-link active" href="#">Active</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link disabled" href="#">Disabled</a>
-        <a class="nav-link active" href="#">Active</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link disabled" href="#">Disabled</a>
-        <a class="nav-link active" href="#">Active</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </div>
-    </div>
   </nav>
 
+  <div class="modal fade bg-white" id="modalMenu" role="dialog" aria-hidden="true">
 
-
-  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">RAY</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+      <span class="oi oi-x"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
+    <div class="modal-dialog">
+      <div class="modal-content">
         <a class="nav-link active" href="#">Active</a>
         <a class="nav-link" href="#">Link</a>
         <a class="nav-link" href="#">Link</a>
@@ -60,11 +40,15 @@
         <a class="nav-link disabled" href="#">Disabled</a>
       </div>
     </div>
-  </nav> -->
+  </div>
+
+
+  <nav class="navbar navbar-light d-none d-lg-block" style="min-height: 80px;">
+  </nav>
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-4 bg-warning d-none d-sm-block" style="max-width: 320px;">
+      <div class="col-4 bg-warning d-none d-lg-block" style="max-width: 320px;">
         <nav class="nav flex-sm-column bg-info">
           <a class="nav-link active" href="#">Active</a>
           <a class="nav-link" href="#">Link</a>
