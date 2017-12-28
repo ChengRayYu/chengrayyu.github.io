@@ -7,25 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link  rel="stylesheet" href="assets/open-iconic/font/css/open-iconic-bootstrap.css">
+  <link rel="stylesheet" href="assets/open-iconic/font/css/open-iconic-bootstrap.css">
+  <link rel="stylesheet" href="css/portfolio.css">
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light d-block d-lg-none" style="min-height: 80px;">
-    <a class="navbar-brand" href="#">RAY</a>
-    <button class="modal float-right" type="button" data-toggle="modal" data-target="#modalMenu" aria-hidden="false">
+    <a class="navbar-brand" href="#">WRAY</a>
+    <button class="btn btn-outline-secondary float-right" type="button" data-toggle="modal" data-target="#navbarMenu" aria-hidden="false">
       <span class="oi oi-menu"></span>
     </button>
-
   </nav>
 
-  <div class="modal fade bg-white" id="modalMenu" role="dialog" aria-hidden="true">
-
+  <div class="modal fade bg-white" id="navbarMenu" role="dialog" aria-hidden="true">
     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-      <span class="oi oi-x"></span>
+      <span class="oi oi-x" aria-hidden="true"></span>
     </button>
+
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content align-items-center">
         <a class="nav-link active" href="#">Active</a>
         <a class="nav-link" href="#">Link</a>
         <a class="nav-link" href="#">Link</a>
@@ -42,22 +42,47 @@
     </div>
   </div>
 
-
   <nav class="navbar navbar-light d-none d-lg-block" style="min-height: 80px;">
   </nav>
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-4 bg-warning d-none d-lg-block" style="max-width: 320px;">
-        <nav class="nav flex-sm-column bg-info">
-          <a class="nav-link active" href="#">Active</a>
-          <a class="nav-link" href="#">Link</a>
-          <a class="nav-link" href="#">Link</a>
-          <a class="nav-link disabled" href="#">Disabled</a>
+
+      <div class="col-3 d-none d-lg-block" id="sidebarMenu">
+        <nav class="nav sidebar flex-sm-column">
+          <a class="menu-item text-uppercase" href="#">Bio</a>
+          <a class="menu-item text-uppercase" href="#">Profile</a>
+          <a class="menu-category" href="#">Work</a>
+          <a class="menu-item" href="#">YouBike Quanzhou</a>
+          <a class="menu-item" href="#">Air Quality</a>
+          <a class="menu-item" href="#">iShare</a>
+          <a class="menu-item" href="#">HumberSpa</a>
+          <a class="menu-category" href="#">Research</a>
+          <a class="menu-item" href="#">AR/VR</a>
+          <a class="menu-item" href="#">Grocery Gateway</a>
+          <a class="menu-item" href="#">Hyundai Website Usablity Test</a>
+          <a class="menu-item" href="#">Waiting Experience Diary Study</a>
+          <a class="menu-category" href="#">Volunteer</a>
+          <a class="menu-item" href="#">Activity #1</a>
+          <a class="menu-item" href="#">Activity #2</a>
+          <a class="menu-item" href="#">Activity #3</a>
         </nav>
       </div>
+
       <div class="col bg-secondary">
-        <h1>Hello, world!</h1>
+        <h1 class="display-1">Display 1</h1>
+        <h1 class="display-2">Display 2</h1>
+        <h1 class="display-3">Display 3</h1>
+        <h1 class="display-4">Display 4</h1>
+        <h1 class="display-1">Display 1</h1>
+        <h1 class="display-2">Display 2</h1>
+        <h1 class="display-3">Display 3</h1>
+        <h1 class="display-4">Display 4</h1>
+        <h1 class="display-1">Display 1</h1>
+        <h1 class="display-2">Display 2</h1>
+        <h1 class="display-3">Display 3</h1>
+        <h1 class="display-4">Display 4</h1>
+
 
       </div>
     </div>
@@ -66,6 +91,6 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-</body>
 
+</body>
 </html>

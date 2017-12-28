@@ -1,0 +1,55 @@
+/* Custom Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Exo+2:100,200,300,400,500,600,700,800,900|Raleway:100,200,300,400,500,600,700,800,900|Lato:100,300,400,700|Montserrat');
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  /* font-family: 'Raleway', sans-serif; */
+  /* font-family: 'Lato', sans-serif; */
+  background-color: #FAFAFA;
+}
+
+.container-fluid {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+#navbarMenu a {
+  font-size: 20px;
+}
+
+#sidebarMenu {
+  padding-left: 40px;
+  padding-Right: 20px;
+  margin-right: 40px;
+}
+
+#sidebarMenu nav>a {
+  font-size: 12px;
+  text-decoration: none;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+#sidebarMenu .menu-category {
+  font-weight: 300;
+  color: #424242;
+  text-transform: uppercase;
+  margin-top: 24px;
+}
+
+#sidebarMenu .menu-category:hover {
+  color: #9E9E9E;
+}
+
+#sidebarMenu .menu-item {
+  font-weight: 100;
+  color: #9E9E9E;
+}
+
+#sidebarMenu .menu-item:hover {
+  color: #616161;
+}
