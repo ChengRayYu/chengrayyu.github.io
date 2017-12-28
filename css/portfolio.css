@@ -12,44 +12,72 @@ body {
   background-color: #FAFAFA;
 }
 
-.container-fluid {
-  padding-left: 60px;
-  padding-right: 60px;
-}
-
 #navbarMenu a {
   font-size: 20px;
 }
 
-#sidebarMenu {
-  padding-left: 40px;
-  padding-Right: 20px;
-  margin-right: 40px;
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  height: auto;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
-#sidebarMenu nav>a {
+.sidebar>nav>a {
   font-size: 12px;
   text-decoration: none;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
-#sidebarMenu .menu-category {
+.sidebar .menu-category {
   font-weight: 300;
   color: #424242;
   text-transform: uppercase;
   margin-top: 24px;
 }
 
-#sidebarMenu .menu-category:hover {
+.sidebar .menu-category:hover {
   color: #9E9E9E;
 }
 
-#sidebarMenu .menu-item {
+.sidebar .menu-item {
   font-weight: 100;
   color: #9E9E9E;
 }
 
-#sidebarMenu .menu-item:hover {
+.sidebar .menu-item:hover {
   color: #616161;
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 30px;
+}
+
+.sidebar-footer-icon {
+
+}
+
+.hero-wrapper {
+  margin-left: 16px;
+  margin-right: 16px
+}
+
+@media (min-width:768px) {
+  .hero-wrapper {
+    margin-left: 320px;
+    margin-right: 32px
+  }
+}
+
+@media (min-width:768px) {
+  .hero-wrapper, .sidebar {
+    margin-top: 60px;
+  }
 }
