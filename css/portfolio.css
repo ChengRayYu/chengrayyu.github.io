@@ -5,6 +5,28 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900');
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+:root {
+  /* Color Spec */
+  --backgroundColor: #FAFAFA;
+  --primaryTextColor: #424242;
+  --primaryTextColor_hover: #757575;
+  --secondaryTextColor: #9E9E9E;
+  --secondaryTextColor_hover: #616161;
+  --gray50: #FAFAFA;
+  --gray100: #F5F5F5;
+  --gray200: #EEEEEE;
+  --gray300: #E0E0E0;
+  --gray400: #BDBDBD;
+  --gray500: #9E9E9E;
+  --gray600: #757575;
+  --gray700: #616161;
+  --gray800: #424242;
+  --gray900: #212121;
+  /* Interaction */
+  --btnPressedScale: 0.9;
+  --linkHoverScale: 1.01;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
@@ -14,7 +36,7 @@ body {
   /* font-family: 'Oswald', sans-serif; */
   /* font-family: 'Raleway', sans-serif; */
   /* font-family: 'Lato', sans-serif; */
-  background-color: #FAFAFA;
+  background-color: var(--colorBackground);
 }
 
 .btn:focus, .btn:focus:active {
@@ -29,24 +51,29 @@ body {
   padding-bottom: 3px;
   position: sticky;
   top: 0;
-  background-color: #FAFAFA;
+  background-color: var(--backgroundColor);
 }
 
 #navbar>button {
-  background-color: #FAFAFA;
+  color: var(--primaryTextColor);
+  background-color: var(--backgroundColor);
 }
 
 #navbar>button:hover {
-  color: #9E9E9E;
+  color: var(--primaryTextColor_hover);
 }
 
 #navbar>button:active {
-  transform: scale(0.9);
+  transform: scale(var(--btnPressedScale));
 }
 
 .navbar-brand {
   text-decoration: none;
-  color: #424242;
+  color: var(--primaryTextColor);
+}
+
+.navbar-brand:hover {
+  color: var(--primaryTextColor_hover);
 }
 
 #navbarMenu a {
@@ -55,11 +82,6 @@ body {
 
 .sidebar-header {
   margin-bottom: 80px;
-}
-
-.sidebar-header>a {
-  text-decoration: none;
-  color: #424242;
 }
 
 .sidebar {
@@ -82,22 +104,24 @@ body {
 
 .sidebar .menu-category {
   font-weight: 300;
-  color: #424242;
+  color: var(--primaryTextColor);
   text-transform: uppercase;
   margin-top: 24px;
 }
 
 .sidebar .menu-category:hover {
-  color: #9E9E9E;
+  color: var(--primaryTextColor_hover);
+  transform: scale(var(--linkHoverScale));
 }
 
 .sidebar .menu-item {
   font-weight: 100;
-  color: #9E9E9E;
+  color: var(--secondaryTextColor);
 }
 
 .sidebar .menu-item:hover {
-  color: #616161;
+  color: var(--secondaryTextColor_hover);
+  transform: scale(var(--linkHoverScale));
 }
 
 .sidebar-footer {
@@ -115,14 +139,18 @@ body {
   font-size: 15px;
   display: inline-block;
   text-decoration: none;
-  color: #9E9E9E;
+  color: var(--secondaryTextColor);
   margin-right: 16px;
+}
+
+.social-icon:hover {
+  color: var(--secondaryTextColor_hover);
 }
 
 .copyright {
   font-size: 10px;
   font-weight: 100;
-  color: #9E9E9E;
+  color: var(--secondaryTextColor);
   margin-bottom: 0px;
 }
 
