@@ -7,24 +7,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/open-iconic/font/css/open-iconic-bootstrap.css">
+  <link rel="stylesheet" href="assets/foundation-icons/foundation-icons.css">
+  <link rel="stylesheet" href="assets/brand/brand.css">
   <link rel="stylesheet" href="css/portfolio.css">
 </head>
 
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-light bg-light d-block d-md-none" style="min-height: 60px;">
-    <a class="navbar-brand" href="#">WRAY</a>
-    <button class="btn btn-outline-secondary float-right" type="button" data-toggle="modal" data-target="#navbarMenu" aria-hidden="false">
-        <span class="oi oi-menu"></span>
+  <div class="d-flex align-items-center justify-content-between d-block d-md-none" id="navbar">
+    <a class="navbar-brand" href="#">
+        <i class="fi-ray fi-2x"></i>
+    </a>
+    <button class="btn float-right" type="button" data-toggle="modal" data-target="#navbarMenu" aria-hidden="false">
+        <span class="fi-list"></span>
       </button>
-  </nav>
+  </div>
+
 
   <!-- Navbar Modal Menu -->
   <div class="modal fade bg-white" id="navbarMenu" role="dialog" aria-hidden="true">
-    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-        <span class="oi oi-x" aria-hidden="true"></span>
+    <button class="btn" type="button" data-dismiss="modal" aria-label="Close">
+        <span class="fi-x" aria-hidden="true"></span>
       </button>
 
     <div class="modal-dialog">
@@ -47,6 +51,13 @@
 
   <!-- Sidebar -->
   <div class="sidebar d-none d-md-block">
+
+    <div class="sidebar-header">
+      <a href="#">
+        <i class="fi-ray fi-3x"></i>
+      </a>
+    </div>
+
     <nav class="nav flex-column">
       <a class="menu-item text-uppercase" href="#">Bio</a>
       <a class="menu-item text-uppercase" href="#">Profile</a>
@@ -67,7 +78,20 @@
     </nav>
 
     <nav class="sidebar-footer">
-    <!-- TODO: SOCIAL ICONS -->
+      <p class="social-icons">
+        <a class="social-icon" href="mailto://eebolue@gmail.com">
+          <i class="fi-mail fi-lg"></i>
+        </a>
+        <a class="social-icon" href="https://www.linkedin.com/in/ycray">
+          <i class="fi-social-linkedin fi-lg"></i>
+        </a>
+        <a class="social-icon" href="https://github.com/ycray">
+          <i class="fi-social-github fi-lg"></i>
+        </a>
+      </p>
+      <p class="copyright">
+        &copy; <script>document.write(new Date().getFullYear())</script> ycray.github.io, All Rights Reserved.
+      </p>
     </nav>
   </div>
 
