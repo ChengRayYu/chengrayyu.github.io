@@ -440,6 +440,8 @@ template {
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900');
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+
 :root {
   /* Color Spec */
   --backgroundColor: #FAFAFA;
@@ -467,6 +469,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
+  /* font-family: 'Inconsolata', monospace; */
   font-family: 'Exo 2', sans-serif;
   /* font-family: 'Oswald', sans-serif; */
   /* font-family: 'Raleway', sans-serif; */
