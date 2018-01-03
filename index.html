@@ -1,9 +1,198 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-  </body>
+
+<head>
+  <title>Ray's Porfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="196x196" href="favicon/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="favicon/favicon-160.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16.png">
+  <link rel="apple-touch-icon" href="favicon/favicon-57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/favicon-114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/favicon-72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/favicon-144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/favicon-60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/favicon-120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/favicon-76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/favicon-152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/favicon-180.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="/favicon-144.png">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/foundation-icons/foundation-icons.css">
+  <link rel="stylesheet" href="assets/brand/brand.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+
+<body data-spy="scroll" data-target="#sidebarMenu" data-offset="400">
+
+  <!-- Navbar -->
+  <div class="d-flex align-items-center justify-content-between d-block d-md-none" id="navbar">
+    <a class="navbar-brand" href="#">
+        <i class="fi-ray fi-2x"></i>
+    </a>
+    <button class="btn float-right" type="button" data-toggle="modal" data-target="#modalMenu" aria-hidden="false">
+        <span class="fi-list"></span>
+      </button>
+  </div>
+
+  <!-- Navbar Modal Menu -->
+  <div class="modal" id="modalMenu" role="dialog" data-easein="slideRightIn" aria-hidden="true">
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button class="btn float-right" type="button" data-dismiss="modal">
+              <span class="fi-x"></span>
+            </button>
+        <nav class="nav flex-column">
+          <a class="modal-menu-item" onclick="$('#modalMenu').modal('hide')" href="#bio">BIO</a>
+          <a class="modal-menu-item" onclick="$('#modalMenu').modal('hide')" href="#work">WORK</a>
+          <a class="modal-menu-item" onclick="$('#modalMenu').modal('hide')" href="#research">RESEARCH</a>
+          <a class="modal-menu-item" onclick="$('#modalMenu').modal('hide')" href="#volunteer">VOLUNTEER</a>
+        </nav>
+
+        <div class="modal-content-footer">
+          <p>
+            <a class="social-icon" href="mailto://eebolue@gmail.com">
+              <i class="fi-mail fi-lg"></i>
+            </a>
+            <a class="social-icon" href="https://www.linkedin.com/in/ycray">
+              <i class="fi-social-linkedin fi-lg"></i>
+            </a>
+            <a class="social-icon" href="https://github.com/ycray">
+              <i class="fi-social-github fi-lg"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar d-none d-md-block">
+
+    <div class="sidebar-header">
+      <a class="navbar-brand" href="#">
+        <i class="fi-ray fi-2x"></i>
+      </a>
+    </div>
+
+    <nav class="nav flex-column" id="sidebarMenu">
+      <a class="nav-link" href="#bio">
+        <p class="menu-item text-uppercase">bio</p>
+      </a>
+      <a class="nav-link nav-link-category" href="#work">
+        <p class="menu-category text-uppercase">Work</p>
+      </a>
+      <a class="nav-link" href="#">
+        <p class="menu-item">YouBike Quanzhou</p>
+      </a>
+      <a class="nav-link" href="#">
+        <p class="menu-item">Air Quality</p>
+      </a>
+      <a class="nav-link" href="#">
+        <p class="menu-item">iShare</p>
+      </a>
+      <a class="nav-link" href="#">
+        <p class="menu-item">HumberSpa</p>
+      </a>
+      <a class="nav-link nav-link-category" href="#research">
+        <p class="menu-category text-uppercase">Research</p>
+      </a>
+      <a class="nav-link" href="#">
+        <p class="menu-item">AR/VR</p>
+      </a>
+      <a class="nav-link" href="#">
+        <p class="menu-item">Grocery Gateway</p>
+      </a>
+      <a class="nav-link" href="#">
+        <p class="menu-item">Hyundai Website Usablity Test</p>
+      </a>
+      <a class="nav-link" href="#">
+        <p class="menu-item">Waiting Experience Diary Study</p>
+      </a>
+      <a class="nav-link nav-link-category" href="#volunteer">
+        <p class=" menu-category text-uppercase">Volunteer</p>
+      </a>
+      <a class="nav-link" href="#">
+        <p class="menu-item">Activity #1</p>
+      </a>
+      <a class="nav-link" href="#">
+        <p class="menu-item">Activity #2</p>
+      </a>
+      <a class="nav-link" href="#">
+        <p class="menu-item">Activity #3</p>
+      </a>
+    </nav>
+
+    <nav class="sidebar-footer">
+      <p class="social-icons">
+        <a class="social-icon" href="mailto://eebolue@gmail.com">
+          <i class="fi-mail fi-lg"></i>
+        </a>
+        <a class="social-icon" href="https://www.linkedin.com/in/ycray">
+          <i class="fi-social-linkedin fi-lg"></i>
+        </a>
+        <a class="social-icon" href="https://github.com/ycray">
+          <i class="fi-social-github fi-lg"></i>
+        </a>
+      </p>
+      <p class="copyright">
+        &copy;
+        <script>
+          document.write(new Date().getFullYear())
+        </script> ycray.github.io, All Rights Reserved.
+      </p>
+    </nav>
+  </div>
+
+  <!-- Hero-Wrapper -->
+  <div class="hero-wrapper">
+
+    <section class="section bio bg-primary" id="bio">
+      <h2>BIO</h2>
+    </section>
+
+    <section class="section work bg-success" id="work">
+      <h2>WORK</h2>
+
+    </section>
+
+    <section class="section research bg-danger" id="research">
+      <h2>RESEARCH</h2>
+
+    </section>
+
+    <section class="section volunteer bg-warning" id="volunteer">
+      <h2>VOLUNTEER</h2>
+
+    </section>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  <!-- Smooth Scroll -->
+  <script type="text/javascript">
+    $('.nav-link[href*=\\#]:not([href=\\#])').click(function() {
+      $('html, body').animate({
+        scrollTop: $($(this).attr('href')).offset().top
+      }, 500);
+      return false;
+    });
+  </script>
+
+</body>
+
 </html>

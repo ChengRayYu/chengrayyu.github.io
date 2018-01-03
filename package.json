@@ -1,0 +1,22 @@
+{
+  "name": "ycray.github.io",
+  "version": "1.0.0",
+  "description": "ycray.github.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ycray/ycray.github.io.git"
+  },
+  "author": "Ray",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ycray/ycray.github.io/issues"
+  },
+  "homepage": "https://github.com/ycray/ycray.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2"
+  }
+}

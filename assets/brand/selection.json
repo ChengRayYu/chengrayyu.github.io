@@ -1,0 +1,99 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M674.909 407.273c0 75.082-47.067 128-116.364 128v23.273c84.382 0 139.636-65.69 139.636-151.273h-23.273zM558.545 279.273c54.56 0 116.364 53.861 116.364 128h23.273c0-86.526-71.762-151.273-139.636-151.273v23.273z",
+          "M989.091 517.818c0 260.276-210.996 471.273-471.273 471.273v23.273c273.13 0 494.545-221.416 494.545-494.545h-23.273zM517.818 989.091c-260.276 0-471.273-210.996-471.273-471.273h-23.273c0 273.13 221.416 494.545 494.545 494.545v-23.273zM46.545 517.818c0-260.276 210.996-471.273 471.273-471.273v-23.273c-273.13 0-494.545 221.416-494.545 494.545h23.273zM517.818 46.545c260.276 0 471.273 210.996 471.273 471.273h23.273c0-273.13-221.416-494.545-494.545-494.545v23.273z",
+          "M372.364 279.273v488.727h23.273v-488.727h-23.273z",
+          "M384 279.273l302.546 488.728 19.788-12.25-302.546-488.728-19.788 12.25z",
+          "M512 465.455l116.363-162.909-18.938-13.527-116.363 162.909 18.938 13.527z",
+          "M372.364 279.273h186.182v-23.273h-186.182v23.273z"
+        ],
+        "attrs": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "Frame"
+        ]
+      },
+      "attrs": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ],
+      "properties": {
+        "order": 2,
+        "id": 0,
+        "name": "ray",
+        "prevSize": 24,
+        "code": 59648
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 0
+    }
+  ],
+  "height": 1024,
+  "metadata": {
+    "name": ""
+  },
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "fi-",
+      "metadata": {
+        "fontFamily": "",
+        "majorVersion": 1,
+        "minorVersion": 0
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.5,
+        "whitespace": 50
+      },
+      "embed": false,
+      "showSelector": true,
+      "showMetrics": true,
+      "showMetadata": true,
+      "showVersion": true,
+      "selector": "",
+      "classSelector": ".icon",
+      "noie8": false,
+      "ie7": false,
+      "cssVars": false,
+      "cssVarsFormat": "scss"
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon",
+      "height": 32,
+      "columns": 16,
+      "margin": 16
+    },
+    "historySize": 50,
+    "showCodes": true,
+    "gridSize": 16,
+    "showLiga": false,
+    "showGrid": true
+  }
+}
