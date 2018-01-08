@@ -825,7 +825,7 @@ body {
   }
   .banner {
     margin-top: 20vh;
-    margin-left: 12vw;
+    margin-left: 10vw;
   }
   .hero-content {
     padding-left: 0;
@@ -833,15 +833,18 @@ body {
     margin-right: 0;
   }
   .hero-intro, .hero-brief {
-    padding-left: 12vw;
-    padding-right: 12vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
   .hero-skills {
-    padding: 20px 12vw;
+    padding: 20px 10vw;
   }
   .gallery {
-    margin: 0 12vw;
+    margin: 0 10vw;
   }
+}
+
+@media (max-width:575px) {
   #work .gallery-item:nth-child(2n+1) {
     padding: 0;
   }
