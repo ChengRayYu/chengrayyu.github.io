@@ -461,6 +461,9 @@ template {
   /* Interaction */
   --btnPressedScale: 0.9;
   --linkHoverScale: 1.02;
+  --galleryImgHoverDuration: 6.0s;
+  --galleryImgHoverScale: 1.4;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -682,14 +685,13 @@ body {
 }
 
 .section-wrapper {
-  margin-left: 0;
+  margin-left: 300px;
   margin-right: 0;
 }
 
 .banner {
-  margin-left: 12vw;
-  margin-right: 0;
-  margin-top: 20vh;
+  margin: 0 8vw;
+  margin-top: 25vh;
   margin-bottom: 10vh;
 }
 
@@ -701,7 +703,7 @@ body {
 }
 
 .hero-content {
-  padding-left: 12vw;
+  padding-left: 8vw;
   margin-right: 30px;
   margin-bottom: 10vh;
 }
@@ -725,7 +727,7 @@ body {
 }
 
 .hero-brief {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 300;
   color: var(--secondaryTextColor);
   padding-top: 30px;
@@ -739,23 +741,9 @@ body {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
 }
 
-@media (max-width:991px) {
-  .hero-content {
-    padding-left: 0;
-    padding-right: 0;
-    margin-right: 0;
-  }
-  .hero-intro, .hero-brief {
-    padding-left: 12vw;
-    padding-right: 12vw;
-  }
-  .hero-skills {
-    padding: 20px 12vw;
-  }
-}
-
 .hero-skill {
-  padding: 20px 8px;
+  padding: 20px 0;
+  padding-right: 20px;
 }
 
 .hero-skill-title {
@@ -772,13 +760,95 @@ body {
   color: var(--gray400);
 }
 
-.work {}
+.gallery {
+  padding: 0;
+  margin: 0;
+  margin-left: 8vw;
+  margin-right: 30px;
+}
 
-@media (min-width:992px) {
+.gallery-item {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+#work .gallery-item:nth-child(2n+1) {
+  padding-right: 15px;
+}
+
+#work .gallery-item:nth-child(2n) {
+  padding-left: 15px;
+}
+
+.gallery-item-image {
+  position: relative;
+  width: 100%;
+  padding-bottom: 62.5%;
+  overflow: hidden;
+}
+
+.gallery-item-image .image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -moz-transition: all var(--galleryImgHoverDuration) cubic-bezier(0,.6,.45,1);
+  -webkit-transition: all var(--galleryImgHoverDuration) cubic-bezier(0,.6,.45,1);
+  -o-transition: all var(--galleryImgHoverDuration) cubic-bezier(0,.6,.45,1);
+  transition: all var(--galleryImgHoverDuration) cubic-bezier(0,.6,.45,1);
+}
+
+.gallery-item-image:hover .image {
+  -moz-transform: scale(var(--galleryImgHoverScale));
+  -webkit-transform: scale(var(--galleryImgHoverScale));
+  -o-transform: scale(var(--galleryImgHoverScale));
+  transform: scale(var(--galleryImgHoverScale));
+}
+
+.img-ubqz {
+  background: url('../assets/img/hero-skills.jpg') no-repeat center center;
+}
+
+.img-humberspa {
+  background: url('../assets/img/hero-skills2.jpg') no-repeat center center;
+}
+
+.gallery-item-title {}
+
+@media (max-width:991px) {
   .section-wrapper {
-    margin-left: 240px;
+    margin-left: 0;
   }
   .banner {
-    margin-top: 25vh;
+    margin-top: 20vh;
+    margin-left: 10vw;
+  }
+  .hero-content {
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .hero-intro, .hero-brief {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  .hero-skills {
+    padding: 20px 10vw;
+  }
+  .gallery {
+    margin: 0 10vw;
+  }
+}
+
+@media (max-width:575px) {
+  #work .gallery-item:nth-child(2n+1) {
+    padding: 0;
+  }
+  #work .gallery-item:nth-child(2n) {
+    padding: 0;
   }
 }
