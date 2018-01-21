@@ -441,6 +441,7 @@ template {
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
 
 :root {
   /* Color Spec */
@@ -475,7 +476,8 @@ template {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Source Sans Pro', sans-serif;
   padding: 0px;
   margin: 0px;
 }
@@ -488,7 +490,6 @@ p {
 body {
   /* font-family: 'Open Sans', sans-serif; */
   /* font-family: 'Inconsolata', monospace; */
-  /* font-family: 'Exo 2', sans-serif; */
   font-family: 'Roboto', sans-serif;
   background-color: var(--backgroundColor);
 }
@@ -635,7 +636,7 @@ body {
 
 .menu-item-title {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: var(--textColorLight);
 }
@@ -661,8 +662,33 @@ body {
 .section-wrapper {
   margin-left: 300px;
   margin-right: 0;
+  display: vertical;
 }
 
+.hero-intro {
+  margin: 0 10vw;
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 1.2em;
+  color: var(--textColor);
+}
+
+.hero-title-muted {
+  font-weight: 700;
+  font-size: 0.9em;
+  color: var(--textColorLight);
+}
+
+.hero-brief {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--textColorLight);
+  margin-top: 30px;
+}
+
+/*
 .banner {
   margin: 0 8vw;
   margin-top: 25vh;
@@ -732,7 +758,7 @@ body {
   font-weight: 400;
   line-height: 1.8;
   color: var(--textColorLight);
-}
+} */
 
 .gallery {
   padding: 0;
@@ -797,7 +823,11 @@ body {
   .section-wrapper {
     margin-left: 0;
   }
-  .banner {
+  .hero-intro {
+    margin: 0 8vw;
+  }
+
+  /* .banner {
     margin-top: 20vh;
     margin-left: 10vw;
   }
@@ -812,7 +842,7 @@ body {
   }
   .hero-skills {
     padding: 20px 10vw;
-  }
+  } */
   .gallery {
     margin: 0 10vw;
   }
