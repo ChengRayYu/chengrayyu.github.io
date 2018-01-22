@@ -84,10 +84,10 @@
     <div class="d-flex flex-column justify-content-center align-items-end" style="height: 100%">
 
       <nav class="nav flex-column" id="sidebarMenu">
-        <a class="nav-link menu-item" href="#hero">
+        <!-- <a class="nav-link menu-item" href="#hero">
           <span class="menu-item-line"></span>
           <span class="menu-item-title text-uppercase">Bio</span>
-        </a>
+        </a> -->
         <a class="nav-link menu-item" href="#YouBike">
           <span class="menu-item-line"></span>
           <span class="menu-item-title text-uppercase">YouBike</span>
@@ -146,20 +146,56 @@
       </a>
     </section>
 
-    <section class="section bg-success" style="height: 80vh" id="GroceryGateway">
-      <h2>Grocery Gateway</h2>
+    <section class="section" id="GroceryGateway">
+      <a class="project fade" href="#">
+        <div class="project-main col-md-5">
+          <h1 class="project-main-title">Grocery Gateway</h1>
+          <p class="project-main-detail">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+        </div>
+        <div class="project-media col-md-7">
+          <div class="image img-ubqz"></div>
+        </div>
+      </a>
     </section>
-    <section class="section bg-warning" style="height: 80vh" id="Hyundai">
-      <h2>Hyundai Usablity Test</h2>
+
+    <section class="section" id="Hyundai">
+      <a class="project fade" href="#">
+        <div class="project-main col-md-5">
+          <h1 class="project-main-title">Hyundai Usablity Test</h1>
+          <p class="project-main-detail">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+        </div>
+        <div class="project-media col-md-7">
+          <div class="image img-ubqz"></div>
+        </div>
+      </a>
     </section>
-    <section class="section bg-danger" style="height: 80vh" id="DiaryStudy">
-      <h2>Diary Study</h2>
+
+    <section class="section" id="DiaryStudy">
+      <a class="project fade" href="#">
+        <div class="project-main col-md-5">
+          <h1 class="project-main-title">Diary Study</h1>
+          <p class="project-main-detail">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+        </div>
+        <div class="project-media col-md-7">
+          <div class="image img-ubqz"></div>
+        </div>
+      </a>
     </section>
-    <section class="section bg-warning" style="height: 80vh" id="HumberSpa">
-      <h2>HumberSpa</h2>
+
+    <section class="section" id="HumberSpa">
+      <a class="project fade" href="#">
+        <div class="project-main col-md-5">
+          <h1 class="project-main-title">HumberSpa</h1>
+          <p class="project-main-detail">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+        </div>
+        <div class="project-media col-md-7">
+          <div class="image img-ubqz"></div>
+        </div>
+      </a>
     </section>
-    <section class="section bg-success" style="height: 80vh" id="Contact">
-      <h2>Contact</h2>
+
+    <section class="section bg-success" style="height: 30vh" id="Contact">
+      <h6>Contact</h6>
     </section>
   </div>
 
@@ -182,16 +218,21 @@
         var windowBottom = $(this).scrollTop() + $(this).innerHeight();
         $(".fade").each(function() {
           /* Check the location of each desired element */
-          var objectBottom = $(this).offset().top + $(this).outerHeight()/2;
+          var halfObjectBottom = $(this).offset().top + $(this).outerHeight() * 0.5;
+          var threeForthObjectBottom = $(this).offset().top + $(this).outerHeight() * 0.75;
 
-          /* If the element is completely within bounds of the window, fade it in */
-          if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+          //object comes into view (scrolling down)
+          // If half of the element is within bounds of the window, fade it in
+          if (halfObjectBottom < windowBottom) {
             if ($(this).css("opacity") == 0) {
-              $(this).fadeTo(200, 1);
+              $(this).fadeTo(300, 1);
             }
-          } else { //object goes out of view (scrolling up)
+
+          //object goes out of view (scrolling up)
+          // If 75% of the element is outside bounds of the window, fade it out
+          } else if (threeForthObjectBottom > windowBottom) {
             if ($(this).css("opacity") == 1) {
-              $(this).fadeTo(200, 0);
+              $(this).fadeTo(300, 0);
             }
           }
         });
