@@ -453,6 +453,9 @@ template {
   --textColor: #333333;
   --textColorHover: #666666;
   --textColorLight: #B8B9B3;
+
+  --linkedinThemeColor: #0077B5;
+  --githubThemeColor: #6E5494;
   --gray50: #FAFAFA;
   --gray100: #F5F5F5;
   --gray200: #EEEEEE;
@@ -504,10 +507,7 @@ body {
 }
 
 #navbar {
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 0;
   position: sticky;
   top: 0;
   background-color: var(--backgroundColor);
@@ -720,9 +720,9 @@ body {
   color: var(--textColorLight);
 }
 
-.project-main:hover .project-main-title {
+/* .project-main:hover .project-main-title {
   color: var(--accentColor);
-}
+} */
 
 .project-media {
   width: 100%;
@@ -742,12 +742,68 @@ body {
   transform: translate(var(--projectTransformHorizontal), var(--projectTransformVertical));
 }
 
+#Contact {
+  margin: 10vh 10vw;
+  margin-right: 4vw;
+}
+
+.contact-brief {
+  font-weight: 300;
+  font-size: 15px;
+  padding: 0;
+  padding-top: 16px;
+  padding-bottom: 32px;
+  color: var(--textColorLight);
+}
+
+.contact-about {
+  color: var(--textColorLight);
+  text-decoration: underline;
+}
+
+.contact-about:hover {
+  color: var(--textColorHover);
+}
+
+.contact-social-btn {
+  color: var(--textColorLight);
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  border: 1px solid var(--textColorLight);
+  padding: 4px 16px;
+  text-decoration: none !important;
+}
+
+.contact-social-btn:nth-child(2n) {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.email:hover {
+  color: var(--textColorHover);
+  border: 1px solid var(--textColorHover);
+}
+
+.github:hover {
+  color: var(--githubThemeColor);
+  border: 1px solid var(--githubThemeColor);
+}
+
+.linkedin:hover {
+  color: var(--linkedinThemeColor);
+  border: 1px solid var(--linkedinThemeColor);
+}
+
 @media (max-width:991px) {
+  #navbar {
+    padding: 5px 6vw;
+  }
   .section-wrapper {
     margin-left: 0;
   }
   .hero-intro {
-    margin: 0 8vw;
+    margin: 0 6vw;
   }
   .hero-title {
     font-size: 32px;
@@ -756,13 +812,20 @@ body {
     font-size: 28px;
   }
   .project {
-    margin-left: 8vw;
-    margin-right: 4vw;
+    margin-left: 6vw;
+    margin-right: 6vw;
   }
   .project-main-title {
     font-size: 32px;
   }
   .project-main-detail {
+    font-size: 14px;
+  }
+  #Contact {
+    margin: 8vh 6vw;
+    margin-right: 4vw;
+  }
+  .contact-brief {
     font-size: 14px;
   }
 }
@@ -776,8 +839,6 @@ body {
   }
   .project {
     flex-direction: column-reverse;
-    margin-left: 8vw;
-    margin-right: 8vw;
   }
   .project-main {
     margin-top: 30px;
@@ -791,5 +852,11 @@ body {
   }
   .project-media {
     padding-bottom: 66.66%;
+  }
+  #Contact {
+    margin: 8vh 6vw;
+  }
+  .contact-brief {
+    padding-right: 0;
   }
 }

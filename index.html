@@ -42,7 +42,7 @@
         <i class="fi-ray fi-2x"></i>
     </a>
     <button class="btn float-right" type="button" data-toggle="modal" data-target="#modalMenu" aria-hidden="false">
-        <span class="fi-list"></span>
+        <span class="fi-list fi-lg"></span>
       </button>
   </div>
 
@@ -108,10 +108,10 @@
           <span class="menu-item-line"></span>
           <span class="menu-item-title text-uppercase">HumberSpa</span>
         </a>
-        <a class="nav-link menu-item" href="#Contact">
+        <!-- <a class="nav-link menu-item" href="#Contact">
           <span class="menu-item-line"></span>
           <span class="menu-item-title text-uppercase">Contact</span>
-        </a>
+        </a> -->
       </nav>
     </div>
   </div>
@@ -122,8 +122,9 @@
     <section class="section d-flex flex-column justify-content-center" style="height: 100vh" id=hero>
       <div class="hero-intro">
         <h1>
-          <span class="hero-title">Hi, I'm Ray.</span>
+          <span class="hero-title">Hi, I'm Ray</span>
           <span class="hero-title-muted text-nowrap"> /CHENG-JUI YU/</span>
+          <span class="hero-title">.</span>
           <br>
           <span class="hero-title">I'm a mobile developer & a coffee addict.</span>
         </h1>
@@ -194,11 +195,19 @@
       </a>
     </section>
 
-    <section class="section bg-success" style="height: 30vh" id="Contact">
-      <h6>Contact</h6>
+    <section class="section" id="Contact">
+      <p class="contact-brief">
+        <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+          quis, sem.</span>
+        <a class="contact-about no-wrap" href="#">Know more about me.</a>
+      </p>
+      <div class="d-flex justify-content-end">
+        <a class="contact-social-btn email" href="mailto://eebolue@gmail.com">Email</a>
+        <a class="contact-social-btn github" href="https://github.com/ycray">Github</a>
+        <a class="contact-social-btn linkedin" href="https://www.linkedin.com/in/ycray">LinkedIn</a>
+      </div>
     </section>
   </div>
-
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
@@ -207,7 +216,7 @@
     // Smooth Scroll
     $('.nav-link[href*=\\#]:not([href=\\#])').click(function() {
       $('html, body').animate({
-        scrollTop: $($(this).attr('href')).offset().top
+        scrollTop: $($(this).attr('href')).offset().top - ($(window).height() - $($(this).attr('href')).outerHeight(true)) / 2
       }, 500);
       return false;
     });
@@ -227,9 +236,8 @@
             if ($(this).css("opacity") == 0) {
               $(this).fadeTo(300, 1);
             }
-
-          //object goes out of view (scrolling up)
-          // If 75% of the element is outside bounds of the window, fade it out
+            //object goes out of view (scrolling up)
+            // If 75% of the element is outside bounds of the window, fade it out
           } else if (threeForthObjectBottom > windowBottom) {
             if ($(this).css("opacity") == 1) {
               $(this).fadeTo(300, 0);
