@@ -469,8 +469,9 @@ template {
   --sideberMenuHoverScale: 3.2;
   --btnPressedScale: 0.9;
   --linkHoverScale: 1.02;
-  --galleryImgHoverDuration: 6.0s;
-  --galleryImgHoverScale: 1.4;
+  --projectHoverDuration: 0.5s;
+  --projectTransformHorizontal: 12px;
+  --projectTransformVertical: -12px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -641,20 +642,20 @@ body {
 
 .nav-link:hover .menu-item-line {
   transform: scaleX(var(--sideberMenuHoverScale));
-  background-color: var(--textColorHover);
+  background-color: var(--accentColor);
 }
 
 .nav-link:hover .menu-item-title {
-  color: var(--textColorHover);
+  color: var(--accentColor);
 }
 
 .nav-link.active .menu-item-line {
   transform: scaleX(var(--sideberMenuActiveScale));
-  background-color: var(--accentColor);
+  background-color: var(--textColorHover);
 }
 
 .nav-link.active .menu-item-title {
-  color: var(--accentColor);
+  color: var(--textColorHover);
 }
 
 .section-wrapper {
@@ -689,7 +690,7 @@ body {
 .project {
   display: flex;
   flex-direction: row;
-  margin: 10vh 0;
+  margin-bottom: 10vh;
   margin-left: 10vw;
   margin-right: 4vw;
   text-decoration: none !important;
@@ -717,49 +718,27 @@ body {
   color: var(--textColorLight);
 }
 
+.project-main:hover .project-main-title {
+  color: var(--accentColor);
+}
+
 .project-media {
   width: 100%;
   padding-bottom: 38.86%;
-  background: var(--backgroundColorGray);
+  background-color: var(--backgroundColorGray);
+
+  -moz-transition: all var(--projectHoverDuration) ease-out;
+  -webkit-transition: all var(--projectHoverDuration) ease-out;
+  -o-transition: all var(--projectHoverDuration) ease-out;
+  transition: all var(--projectHoverDuration) ease-out;
 }
 
-/*
-.gallery-item-image {
-  position: relative;
-  width: 100%;
-  padding-bottom: 62.5%;
-  overflow: hidden;
+.project-media:hover {
+  -moz-transform: translate(var(--projectTransformHorizontal), var(--projectTransformVertical));
+  -webkit-transform: translate(var(--projectTransformHorizontal), var(--projectTransformVertical));
+  -o-transform: translate(var(--projectTransformHorizontal), var(--projectTransformVertical));
+  transform: translate(var(--projectTransformHorizontal), var(--projectTransformVertical));
 }
-
-.gallery-item-image .image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -moz-transition: all var(--galleryImgHoverDuration) cubic-bezier(0, .6, .45, 1);
-  -webkit-transition: all var(--galleryImgHoverDuration) cubic-bezier(0, .6, .45, 1);
-  -o-transition: all var(--galleryImgHoverDuration) cubic-bezier(0, .6, .45, 1);
-  transition: all var(--galleryImgHoverDuration) cubic-bezier(0, .6, .45, 1);
-}
-
-.gallery-item-image:hover .image {
-  -moz-transform: scale(var(--galleryImgHoverScale));
-  -webkit-transform: scale(var(--galleryImgHoverScale));
-  -o-transform: scale(var(--galleryImgHoverScale));
-  transform: scale(var(--galleryImgHoverScale));
-}
-
-.img-ubqz {
-  background: url('../assets/img/hero-skills.jpg') no-repeat center center;
-}
-
-.img-humberspa {
-  background: url('../assets/img/hero-skills2.jpg') no-repeat center center;
-}
-*/
 
 @media (max-width:991px) {
   .section-wrapper {

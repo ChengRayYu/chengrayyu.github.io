@@ -135,12 +135,12 @@
     </section>
 
     <section class="section" id="YouBike">
-      <a class="project" href="#">
+      <a class="project fade" href="#">
         <div class="project-main col-md-5">
           <h1 class="project-main-title">YouBike</h1>
           <p class="project-main-detail">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
         </div>
-        <div class="project-media col-md-7 bg-warning">
+        <div class="project-media col-md-7">
           <div class="image img-ubqz"></div>
         </div>
       </a>
@@ -167,13 +167,35 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-  <!-- Smooth Scroll -->
   <script type="text/javascript">
+    // Smooth Scroll
     $('.nav-link[href*=\\#]:not([href=\\#])').click(function() {
       $('html, body').animate({
         scrollTop: $($(this).attr('href')).offset().top
       }, 500);
       return false;
+    });
+
+    // FadeIn & FadeOut on scroll
+    $(window).on("load", function() {
+      $(window).scroll(function() {
+        var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+        $(".fade").each(function() {
+          /* Check the location of each desired element */
+          var objectBottom = $(this).offset().top + $(this).outerHeight()/2;
+
+          /* If the element is completely within bounds of the window, fade it in */
+          if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+            if ($(this).css("opacity") == 0) {
+              $(this).fadeTo(200, 1);
+            }
+          } else { //object goes out of view (scrolling up)
+            if ($(this).css("opacity") == 1) {
+              $(this).fadeTo(200, 0);
+            }
+          }
+        });
+      }).scroll(); //invoke scroll-handler on page-load
     });
   </script>
 
