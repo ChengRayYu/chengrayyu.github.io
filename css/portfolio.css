@@ -453,7 +453,6 @@ template {
   --textColor: #333333;
   --textColorHover: #666666;
   --textColorLight: #B8B9B3;
-
   --linkedinThemeColor: #0077B5;
   --githubThemeColor: #6E5494;
   --gray50: #FAFAFA;
@@ -602,19 +601,19 @@ body {
   margin: 0 10vw;
 }
 
-.hero-title {
+.hero-intro-title {
   font-weight: 700;
   font-size: 40px;
   color: var(--textColor);
 }
 
-.hero-title-muted {
+.hero-intro-title-muted {
   font-weight: 700;
   font-size: 32px;
   color: var(--textColorLight);
 }
 
-.hero-brief {
+.hero-intro-brief {
   font-size: 15px;
   font-weight: 300;
   color: var(--textColorLight);
@@ -633,7 +632,6 @@ body {
 .project-main {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 0;
   padding-right: 40px;
 }
@@ -641,7 +639,7 @@ body {
 .project-main-title {
   margin-bottom: 8px;
   align-self: flex-start;
-  font-size: 40px;
+  font-size: 28px;
   font-weight: 700;
   color: var(--textColor);
 }
@@ -652,15 +650,10 @@ body {
   color: var(--textColorLight);
 }
 
-/* .project-main:hover .project-main-title {
-  color: var(--accentColor);
-} */
-
 .project-media {
   width: 100%;
   padding-bottom: 38.86%;
   background-color: var(--backgroundColorGray);
-
   -moz-transition: all var(--projectHoverDuration) ease-out;
   -webkit-transition: all var(--projectHoverDuration) ease-out;
   -o-transition: all var(--projectHoverDuration) ease-out;
@@ -737,18 +730,15 @@ body {
   .hero-intro {
     margin: 0 6vw;
   }
-  .hero-title {
+  .hero-intro-title {
     font-size: 32px;
   }
-  .hero-title-muted {
+  .hero-intro-title-muted {
     font-size: 28px;
   }
   .project {
     margin-left: 6vw;
     margin-right: 6vw;
-  }
-  .project-main-title {
-    font-size: 32px;
   }
   .project-main-detail {
     font-size: 14px;
@@ -762,10 +752,10 @@ body {
 }
 
 @media (max-width:767px) {
-  .hero-title {
+  .hero-intro-title {
     font-size: 28px;
   }
-  .hero-title-muted {
+  .hero-intro-title-muted {
     font-size: 24px;
   }
   .project {
