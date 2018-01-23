@@ -539,74 +539,6 @@ body {
   color: var(--textColorLight);
 }
 
-#modalMenu .modal-dialog, .modal-content {
-  width: 100vw;
-  height: 100vh;
-  border: 0px;
-  border-radius: 0px;
-  margin: 0;
-  top: 0;
-  left: 0;
-  justify-content: center;
-}
-
-.modal-content>button {
-  width: 36px;
-  height: 36px;
-  position: absolute;
-  top: 14px;
-  right: 16px;
-  color: var(--textColor);
-  background-color: var(--backgroundColor);
-  transform: none;
-}
-
-.modal-content>button:hover {
-  color: var(--textColorLight);
-}
-
-.modal-content>button:active {
-  color: var(--textColorLight);
-  transform: scale(var(--btnPressedScale));
-}
-
-.modal-content>nav {
-  transform: translateY(-20%);
-}
-
-#modalMenu .modal-menu-item {
-  font-size: 20px;
-  font-weight: 100;
-  text-align: center;
-  text-decoration: none;
-  color: var(--textColor);
-  margin: 8px 0px;
-}
-
-#modalMenu .modal-menu-item:hover {
-  color: var(--textColorLight);
-  transform: scale(var(--linkHoverScale));
-}
-
-#modalMenu .modal-menu-item:active {
-  color: var(--textColorLight);
-}
-
-.social-icon {
-  text-align: center;
-  display: inline-block;
-  text-decoration: none;
-  color: var(--backgroundColorGray);
-  margin: 0 12px;
-}
-
-.modal-content-footer {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  bottom: 30px;
-}
-
 .sidebar {
   position: fixed;
   top: 0;
@@ -823,7 +755,6 @@ body {
   }
   #Contact {
     margin: 8vh 6vw;
-    margin-right: 4vw;
   }
   .contact-brief {
     font-size: 14px;
@@ -852,11 +783,5 @@ body {
   }
   .project-media {
     padding-bottom: 66.66%;
-  }
-  #Contact {
-    margin: 8vh 6vw;
-  }
-  .contact-brief {
-    padding-right: 0;
   }
 }
