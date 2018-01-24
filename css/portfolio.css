@@ -449,12 +449,12 @@ template {
   --backgroundColorWarm: #EFDFC9;
   --backgroundColorWarmLight: #F5F2E9;
   --borderColor: #EEEEEE;
-  --accentColor: #7F0019;
+  --accentColor: #5C0012;
   --textColor: #333333;
   --textColorHover: #666666;
   --textColorLight: #B8B9B3;
   --linkedinThemeColor: #0077B5;
-  --githubThemeColor: #6E5494;
+  --githubThemeColor: #333333;
   --gray50: #FAFAFA;
   --gray100: #F5F5F5;
   --gray200: #EEEEEE;
@@ -466,14 +466,13 @@ template {
   --gray800: #424242;
   --gray900: #212121;
   /* Interaction */
-  --sideberMenuTransitionDuration: 0.4s;
-  --sideberMenuActiveScale: 5.0;
-  --sideberMenuHoverScale: 3.2;
-  --btnPressedScale: 0.9;
-  --linkHoverScale: 1.02;
-  --projectHoverDuration: 0.5s;
-  --projectTransformHorizontal: 12px;
-  --projectTransformVertical: -12px;
+  --sidebarMenuTransitionDuration: 0.4s;
+  --sidebarMenuActiveScale: 5.0;
+  --sidebarMenuHoverScale: 3.2;
+  --projectTitleHoverDuration: 0.4s;
+  --projectMediaHoverDuration: 0.5s;
+  --projectMediaTranslateHorizontal: 12px;
+  --projectMediaTranslateVertical: -12px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -503,30 +502,6 @@ body {
 .row, .col {
   margin: 0;
   padding: 0;
-}
-
-#navbar {
-  padding: 5px 0;
-  position: sticky;
-  top: 0;
-  background-color: var(--backgroundColor);
-  z-index: 999;
-}
-
-#navbar>button {
-  width: 36px;
-  height: 36px;
-  border: 0px;
-  color: var(--textColor);
-  transform: none;
-}
-
-#navbar>button:hover {
-  color: var(--textColorLight);
-}
-
-#navbar>button:active {
-  transform: scale(var(--btnPressedScale));
 }
 
 .navbar-brand {
@@ -563,7 +538,11 @@ body {
   vertical-align: middle;
   background-color: var(--textColorLight);
   transform-origin: right;
-  transition: all var(--sideberMenuTransitionDuration);
+  -webkit-transition: all var(--sidebarMenuTransitionDuration) ease-in-out;
+  -moz-transition: all var(--sidebarMenuTransitionDuration) ease-in-out;
+  -ms-transition: all var(--sidebarMenuTransitionDuration) ease-in-out;
+  -o-transition: all var(--sidebarMenuTransitionDuration) ease-in-out;
+  transition: all var(--sidebarMenuTransitionDuration) ease-in-out;
 }
 
 .menu-item-title {
@@ -571,10 +550,15 @@ body {
   font-size: 13px;
   font-weight: 300;
   color: var(--textColorLight);
+  -webkit-transition: all var(--sidebarMenuTransitionDuration) ease-in-out;
+  -moz-transition: all var(--sidebarMenuTransitionDuration) ease-in-out;
+  -ms-transition: all var(--sidebarMenuTransitionDuration) ease-in-out;
+  -o-transition: all var(--sidebarMenuTransitionDuration) ease-in-out;
+  transition: all var(--sidebarMenuTransitionDuration) ease-in-out;
 }
 
 .nav-link:hover .menu-item-line {
-  transform: scaleX(var(--sideberMenuHoverScale));
+  transform: scaleX(var(--sidebarMenuHoverScale));
   background-color: var(--accentColor);
 }
 
@@ -583,8 +567,12 @@ body {
 }
 
 .nav-link.active .menu-item-line {
-  transform: scaleX(var(--sideberMenuActiveScale));
   background-color: var(--textColorHover);
+  -webkit-transform: scaleX(var(--sidebarMenuActiveScale));
+  -moz-transform: scaleX(var(--sidebarMenuActiveScale));
+  -ms-transform: scaleX(var(--sidebarMenuActiveScale));
+  -o-transform: scaleX(var(--sidebarMenuActiveScale));
+  transform: scaleX(var(--sidebarMenuActiveScale));
 }
 
 .nav-link.active .menu-item-title {
@@ -629,22 +617,31 @@ body {
   text-decoration: none !important;
 }
 
-.project-main {
+.project-intro {
   display: flex;
   flex-direction: column;
   padding: 0;
   padding-right: 40px;
 }
 
-.project-main-title {
-  margin-bottom: 8px;
+.project-intro-title {
+  margin-bottom: 16px;
   align-self: flex-start;
   font-size: 28px;
   font-weight: 700;
   color: var(--textColor);
+  -webkit-transition: all var(--projectTitleHoverDuration) ease-in-out;
+  -moz-transition: all var(--projectTitleHoverDuration) ease-in-out;
+  -ms-transition: all var(--projectTitleHoverDuration) ease-in-out;
+  -o-transition: all var(--projectTitleHoverDuration) ease-in-out;
+  transition: all var(--projectTitleHoverDuration) ease-in-out;
 }
 
-.project-main-detail {
+.project:hover .project-intro>.project-intro-title {
+  color: var(--accentColor);
+}
+
+.project-intro-detail {
   font-weight: 300;
   font-size: 15px;
   color: var(--textColorLight);
@@ -654,17 +651,19 @@ body {
   width: 100%;
   padding-bottom: 38.86%;
   background-color: var(--backgroundColorGray);
-  -moz-transition: all var(--projectHoverDuration) ease-out;
-  -webkit-transition: all var(--projectHoverDuration) ease-out;
-  -o-transition: all var(--projectHoverDuration) ease-out;
-  transition: all var(--projectHoverDuration) ease-out;
+  -webkit-transition: all var(--projectMediaHoverDuration) ease-out;
+  -moz-transition: all var(--projectMediaHoverDuration) ease-out;
+  -ms-transition: all var(--projectMediaHoverDuration) ease-in-out;
+  -o-transition: all var(--projectMediaHoverDuration) ease-out;
+  transition: all var(--projectMediaHoverDuration) ease-out;
 }
 
 .project-media:hover {
-  -moz-transform: translate(var(--projectTransformHorizontal), var(--projectTransformVertical));
-  -webkit-transform: translate(var(--projectTransformHorizontal), var(--projectTransformVertical));
-  -o-transform: translate(var(--projectTransformHorizontal), var(--projectTransformVertical));
-  transform: translate(var(--projectTransformHorizontal), var(--projectTransformVertical));
+  -webkit-transform: translate(var(--projectMediaTranslateHorizontal), var(--projectMediaTranslateVertical));
+  -moz-transform: translate(var(--projectMediaTranslateHorizontal), var(--projectMediaTranslateVertical));
+  -ms-transition: translate(var(--projectMediaTranslateHorizontal), var(--projectMediaTranslateVertical));
+  -o-transform: translate(var(--projectMediaTranslateHorizontal), var(--projectMediaTranslateVertical));
+  transform: translate(var(--projectMediaTranslateHorizontal), var(--projectMediaTranslateVertical));
 }
 
 #Contact {
@@ -706,8 +705,8 @@ body {
 }
 
 .email:hover {
-  color: var(--textColorHover);
-  border: 1px solid var(--textColorHover);
+  color: var(--accentColor);
+  border: 1px solid var(--accentColor);
 }
 
 .github:hover {
@@ -740,9 +739,6 @@ body {
     margin-left: 6vw;
     margin-right: 6vw;
   }
-  .project-main-detail {
-    font-size: 14px;
-  }
   #Contact {
     margin: 8vh 6vw;
   }
@@ -761,14 +757,14 @@ body {
   .project {
     flex-direction: column-reverse;
   }
-  .project-main {
+  .project-intro {
     margin-top: 30px;
     padding: 0;
   }
-  .project-main-title {
+  .project-intro-title {
     font-size: 24px;
   }
-  .project-main-detail {
+  .project-intro-detail {
     font-size: 14px;
   }
   .project-media {
