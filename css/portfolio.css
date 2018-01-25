@@ -99,8 +99,9 @@ hr {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: 360px;
   height: auto;
+  padding-right: 80px;
 }
 
 .menu-item {
@@ -161,14 +162,11 @@ hr {
 }
 
 .section-wrapper {
-  margin-left: 300px;
-  margin-right: 0;
-  display: vertical;
+  padding: 0 4vw;
+  margin-left: 360px;
 }
 
-.hero-intro {
-  margin: 0 10vw;
-}
+.hero-intro {}
 
 .hero-intro-title {
   font-weight: 700;
@@ -193,8 +191,6 @@ hr {
   display: flex;
   flex-direction: row;
   margin-bottom: 10vh;
-  margin-left: 10vw;
-  margin-right: 4vw;
   text-decoration: none !important;
 }
 
@@ -248,8 +244,7 @@ hr {
 }
 
 #Contact {
-  margin: 10vh 10vw;
-  margin-right: 4vw;
+  padding: 10vh 0;
 }
 
 .contact-brief {
@@ -312,6 +307,14 @@ hr {
   padding: 10vh 16vw;
 }
 
+.project-detail-footer {
+  padding: 0 16vw;
+}
+
+.project-detail-footer #top {
+  color: var(--textColor)
+}
+
 .imgBackground-container {
   position: relative;
   width: 100%;
@@ -321,25 +324,13 @@ hr {
   background-position: center;
 }
 
-/* img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-} */
-
 @media (max-width:991px) {
   #navbar {
     padding: 5px 6vw;
   }
   .section-wrapper {
     margin-left: 0;
-  }
-  .hero-intro {
-    margin: 0 6vw;
+    padding: 0 6vw;
   }
   .hero-intro-title {
     font-size: 32px;
@@ -347,18 +338,18 @@ hr {
   .hero-intro-title-muted {
     font-size: 28px;
   }
-  .project {
-    margin-left: 6vw;
-    margin-right: 6vw;
-  }
   #Contact {
-    margin: 8vh 6vw;
+    padding: 8vh 0;
   }
   .contact-brief {
     font-size: 14px;
   }
   .project-detail-header-container, .project-detail-header {
     padding: 10vh 10vw;
+  }
+  .project-detail-footer {
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 }
 
@@ -388,8 +379,8 @@ hr {
   .project-detail-header-container, .project-detail-header {
     padding: 8vh 6vw;
   }
-  .half {
-    width: 90%;
+  .project-detail-footer {
+    padding-left: 6vw;
+    padding-right: 6vw;
   }
-
 }
