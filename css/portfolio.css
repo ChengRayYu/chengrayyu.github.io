@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
+@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
@@ -39,7 +36,6 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  /* font-family: 'Montserrat', sans-serif; */
   font-family: 'Source Sans Pro', sans-serif;
   padding: 0px;
   margin: 0px;
@@ -55,8 +51,7 @@ p, i {
 }
 
 body {
-  /* font-family: 'Open Sans', sans-serif; */
-  /* font-family: 'Inconsolata', monospace; */
+  /* font-family: 'Noto Sans TC', sans-serif; */
   font-family: 'Roboto', sans-serif;
   background-color: var(--backgroundColorGray);
 }
@@ -306,7 +301,7 @@ hr {
   color: var(--textColor)
 }
 
-.project-detail-header-container {
+.project-detail-container {
   padding: 10vh 16vw;
 }
 
@@ -382,7 +377,7 @@ hr {
   .hero-intro-title-muted {
     font-size: 28px;
   }
-  .project-detail-header-container, .project-detail-header {
+  .project-detail-container, .project-detail-header {
     padding: 10vh 10vw;
   }
   .project-detail-footer {
@@ -414,7 +409,7 @@ hr {
   .project-media {
     padding-bottom: 66.66%;
   }
-  .project-detail-header-container, .project-detail-header {
+  .project-detail-container, .project-detail-header {
     padding: 8vh 6vw;
   }
   .project-detail-footer {
