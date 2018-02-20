@@ -32,6 +32,7 @@
   --sidebarMenuTransitionDuration: 0.4s;
   --sidebarMenuActiveScale: 5.0;
   --sidebarMenuHoverScale: 3.2;
+  --footerBtnHoverDuration: 0.4s;
   --projectTitleHoverDuration: 0.4s;
   --projectMediaHoverDuration: 0.5s;
   --projectMediaTranslateHorizontal: 12px;
@@ -72,7 +73,7 @@ blockquote {
 }
 
 hr {
-    width: 60%;
+  width: 60%;
 }
 
 .btn:focus, .btn:focus:active {
@@ -243,56 +244,59 @@ hr {
   transform: translate(var(--projectMediaTranslateHorizontal), var(--projectMediaTranslateVertical));
 }
 
-#Contact {
-  padding: 10vh 0;
+.footer {
+  margin: 8vh 0;
+  margin-top: 10vh;
 }
 
-.contact-brief {
-  font-weight: 300;
-  font-size: 15px;
-  padding: 0;
-  padding-top: 16px;
-  padding-bottom: 32px;
-  color: var(--textColorLight);
+.footer-btns {
+  justify-content: left;
 }
 
-.contact-about {
-  color: var(--textColorLight);
-  text-decoration: underline;
-}
-
-.contact-about:hover {
+.footer-btn {
+  position: relative;
   color: var(--textColorHover);
-}
-
-.contact-social-btn {
-  color: var(--textColorLight);
   font-size: 13px;
   font-weight: 300;
   text-transform: uppercase;
-  border: 1px solid var(--textColorLight);
-  padding: 4px 16px;
   text-decoration: none !important;
+  margin-right: 24px;
 }
 
-.contact-social-btn:nth-child(2n) {
-  margin-left: 30px;
-  margin-right: 30px;
+.footer-btn:hover {
+  color: var(--textColorHover);
 }
 
-.email:hover {
-  color: var(--accentColor);
-  border: 1px solid var(--accentColor);
+.footer-btn:last-child {
+  margin-right: 0;
 }
 
-.github:hover {
-  color: var(--githubThemeColor);
-  border: 1px solid var(--githubThemeColor);
+.footer-btn:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--textColorHover);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all var(--footerBtnHoverDuration) ease-in-out 0s;
+  transition: all var(--footerBtnHoverDuration) ease-in-out 0s;
 }
 
-.linkedin:hover {
-  color: var(--linkedinThemeColor);
-  border: 1px solid var(--linkedinThemeColor);
+.footer-btn:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.copyright {
+  color: var(--textColorLight);
+  font-size: 13px;
+  font-weight: 300;
+  text-align: right;
 }
 
 .project-detail-header {
@@ -308,6 +312,7 @@ hr {
 }
 
 .project-detail-footer {
+  margin-top: 8vh;
   padding: 0 16vw;
 }
 
@@ -337,12 +342,6 @@ hr {
   }
   .hero-intro-title-muted {
     font-size: 28px;
-  }
-  #Contact {
-    padding: 8vh 0;
-  }
-  .contact-brief {
-    font-size: 14px;
   }
   .project-detail-header-container, .project-detail-header {
     padding: 10vh 10vw;
@@ -382,5 +381,16 @@ hr {
   .project-detail-footer {
     padding-left: 6vw;
     padding-right: 6vw;
+  }
+}
+
+@media (max-width:575px) {
+  .footer-btns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  .copyright {
+    text-align: center;
   }
 }
