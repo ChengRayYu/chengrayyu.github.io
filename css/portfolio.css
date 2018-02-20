@@ -35,8 +35,7 @@
   --footerBtnHoverDuration: 0.4s;
   --projectTitleHoverDuration: 0.4s;
   --projectMediaHoverDuration: 0.5s;
-  --projectMediaTranslateHorizontal: 12px;
-  --projectMediaTranslateVertical: -12px;
+  --projectMediaHoverScale: 0.98;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -59,7 +58,7 @@ body {
   /* font-family: 'Open Sans', sans-serif; */
   /* font-family: 'Inconsolata', monospace; */
   font-family: 'Roboto', sans-serif;
-  background-color: var(--backgroundColor);
+  background-color: var(--backgroundColorGray);
 }
 
 blockquote {
@@ -228,20 +227,20 @@ hr {
 .project-media {
   width: 100%;
   padding-bottom: 38.86%;
-  background-color: var(--backgroundColorGray);
+  background-color: var(--gray500);
   -webkit-transition: all var(--projectMediaHoverDuration) ease-out;
   -moz-transition: all var(--projectMediaHoverDuration) ease-out;
-  -ms-transition: all var(--projectMediaHoverDuration) ease-in-out;
+  -ms-transition: all var(--projectMediaHoverDuration) ease-out;
   -o-transition: all var(--projectMediaHoverDuration) ease-out;
   transition: all var(--projectMediaHoverDuration) ease-out;
 }
 
 .project-media:hover {
-  -webkit-transform: translate(var(--projectMediaTranslateHorizontal), var(--projectMediaTranslateVertical));
-  -moz-transform: translate(var(--projectMediaTranslateHorizontal), var(--projectMediaTranslateVertical));
-  -ms-transition: translate(var(--projectMediaTranslateHorizontal), var(--projectMediaTranslateVertical));
-  -o-transform: translate(var(--projectMediaTranslateHorizontal), var(--projectMediaTranslateVertical));
-  transform: translate(var(--projectMediaTranslateHorizontal), var(--projectMediaTranslateVertical));
+  -webkit-transform: scale(var(--projectMediaHoverScale));
+  -moz-transform: scale(var(--projectMediaHoverScale));
+  -ms-transition: scale(var(--projectMediaHoverScale));
+  -o-transform: scale(var(--projectMediaHoverScale));
+  transform: scale(var(--projectMediaHoverScale));
 }
 
 .footer {
@@ -327,6 +326,46 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
 }
 
 @media (max-width:991px) {
