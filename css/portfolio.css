@@ -26,13 +26,12 @@
   --gray800: #424242;
   --gray900: #212121;
   /* Interaction */
-  --sidebarMenuTransitionDuration: 0.4s;
+  --sidebarMenuTransitionDuration: 0.3s;
   --sidebarMenuActiveScale: 5.0;
   --sidebarMenuHoverScale: 3.2;
   --footerBtnHoverDuration: 0.4s;
-  --projectTitleHoverDuration: 0.4s;
-  --projectMediaHoverDuration: 0.5s;
-  --projectMediaHoverScale: 0.98;
+  --projectHoverDuration: 0.4s;
+  --projectMediaHoverScale: 1.2;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -124,7 +123,7 @@ hr {
 
 .menu-item-title {
   font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: var(--textColorLight);
   -webkit-transition: all var(--sidebarMenuTransitionDuration) ease-in-out;
@@ -135,12 +134,11 @@ hr {
 }
 
 .nav-link:hover .menu-item-line {
+  -webkit-transform: scaleX(var(--sidebarMenuHoverScale));
+  -moz-transform: scaleX(var(--sidebarMenuHoverScale));
+  -ms-transform: scaleX(var(--sidebarMenuHoverScale));
+  -o-transform: scaleX(var(--sidebarMenuHoverScale));
   transform: scaleX(var(--sidebarMenuHoverScale));
-  background-color: var(--accentColor);
-}
-
-.nav-link:hover .menu-item-title {
-  color: var(--accentColor);
 }
 
 .nav-link.active .menu-item-line {
@@ -197,6 +195,7 @@ hr {
 }
 
 .project-intro-title {
+  position: relative;
   font-family: 'Barlow Condensed', sans-serif;
   margin-bottom: 8px;
   align-self: flex-start;
@@ -204,39 +203,70 @@ hr {
   font-weight: 600;
   text-transform: uppercase;
   color: var(--textColor);
-  -webkit-transition: all var(--projectTitleHoverDuration) ease-in-out;
-  -moz-transition: all var(--projectTitleHoverDuration) ease-in-out;
-  -ms-transition: all var(--projectTitleHoverDuration) ease-in-out;
-  -o-transition: all var(--projectTitleHoverDuration) ease-in-out;
-  transition: all var(--projectTitleHoverDuration) ease-in-out;
 }
 
-.project:hover .project-intro>.project-intro-title {
-  color: var(--accentColor);
+.project-intro-title:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+  background-color: var(--textColor);
+  visibility: hidden;
+  -webkit-transition: all var(--projectHoverDuration) ease-in-out;
+  -moz-transition: all var(--projectHoverDuration) ease-in-out;
+  -ms-transition: all var(--projectHoverDuration) ease-in-out;
+  -o-transition: all var(--projectHoverDuration) ease-in-out;
+  transition: all var(--projectHoverDuration) ease-in-out;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+.project:hover .project-intro-title:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .project-intro-detail {
   font-weight: 300;
-  color: var(--textColorLight);
+  font-size: 16px;
+  color: var(--textColorHover);
 }
 
 .project-media {
   width: 100%;
   padding-bottom: 38.86%;
   background-color: var(--gray500);
-  -webkit-transition: all var(--projectMediaHoverDuration) ease-out;
-  -moz-transition: all var(--projectMediaHoverDuration) ease-out;
-  -ms-transition: all var(--projectMediaHoverDuration) ease-out;
-  -o-transition: all var(--projectMediaHoverDuration) ease-out;
-  transition: all var(--projectMediaHoverDuration) ease-out;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  -webkit-transition: all var(--projectHoverDuration) ease-in-out;
+  -moz-transition: all var(--projectHoverDuration) ease-in-out;
+  -ms-transition: all var(--projectHoverDuration) ease-in-out;
+  -o-transition: all var(--projectHoverDuration) ease-in-out;
+  transition: all var(--projectHoverDuration) ease-in-out;
 }
 
-.project-media:hover {
-  -webkit-transform: scale(var(--projectMediaHoverScale));
-  -moz-transform: scale(var(--projectMediaHoverScale));
-  -ms-transition: scale(var(--projectMediaHoverScale));
-  -o-transform: scale(var(--projectMediaHoverScale));
-  transform: scale(var(--projectMediaHoverScale));
+.project:hover .project-media {
+  -webkit-filter: grayscale(0);
+  filter: none;
+}
+
+.imgBackground-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .footer {
@@ -313,15 +343,6 @@ hr {
 
 .project-detail-footer #top {
   color: var(--textColor)
-}
-
-.imgBackground-container {
-  position: relative;
-  width: 100%;
-  height: auto;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .animated {
