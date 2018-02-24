@@ -41,6 +41,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--textColor);
 }
 
+body {
+  font-family: 'Barlow', sans-serif;
+  background-color: var(--backgroundColorGray);
+}
+
 p, i {
   font-size: 15px;
   line-height: 1.5rem;
@@ -49,9 +54,9 @@ p, i {
   margin: 0px;
 }
 
-body {
-  font-family: 'Barlow', sans-serif;
-  background-color: var(--backgroundColorGray);
+[class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 blockquote {
@@ -76,6 +81,10 @@ hr {
 .row, [class^='col-'] {
   margin: 0;
   padding: 0;
+}
+
+#navbar {
+  position: absolute;
 }
 
 .navbar-brand {
@@ -183,6 +192,7 @@ hr {
 .project {
   display: flex;
   flex-direction: row;
+  height: 45vh;
   margin-bottom: 10vh;
   text-decoration: none !important;
 }
@@ -244,7 +254,7 @@ hr {
 
 .project-media {
   width: 100%;
-  padding-bottom: 38.86%;
+  height: 100%;
   background-color: var(--gray500);
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
@@ -258,6 +268,14 @@ hr {
 .project:hover .project-media {
   -webkit-filter: grayscale(0);
   filter: none;
+}
+
+.project-media>div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .imgBackground-container {
@@ -358,7 +376,6 @@ hr {
     -webkit-transform: translate3d(0, 40px, 0);
     transform: translate3d(0, 40px, 0);
   }
-
   to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
@@ -372,7 +389,6 @@ hr {
     -webkit-transform: translate3d(0, 40px, 0);
     transform: translate3d(0, 40px, 0);
   }
-
   to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
@@ -427,9 +443,6 @@ hr {
   }
   .project-intro-detail {
     font-size: 14px;
-  }
-  .project-media {
-    padding-bottom: 66.66%;
   }
   .project-detail-container, .project-detail-header {
     padding: 8vh 6vw;
