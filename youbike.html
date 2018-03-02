@@ -115,7 +115,7 @@
             <p>Complex & confusing user flow</p>
           </li>
           <li>
-            <p>Excessive dup information</p>
+            <p>Excessive & redundant information</p>
           </li>
           <li>
             <p>Outdated visual interface design</p>
@@ -123,6 +123,7 @@
         </ul>
       </div>
     </div>
+    <br>
     <br>
     <br>
     <div>
@@ -175,14 +176,32 @@
       </div>
       <br>
       <br>
+      <br>
       <div>
         <p class="text-center text-secondary">
           Navigation Menu
         </p>
         <p class="text-center">
-          Concise navigation by hamburger menu
+          Centralized navigation with hamburger menu
         </p>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-6">
+            <img src="assets/img/yb/m2-nav.png" style="width:100%">
+          </div>
+          <div class="col-1"></div>
+          <div class="col-5 align-self-center">
+            <p class="text-secondary">General Functions</p>
+            <p style="color:var(--textColorLight);">Map, News, Service Center, Instruction, Lost & Found</p>
+            <br>
+            <br>
+            <p class="text-secondary">Advanced functions</p>
+            <p style="color:var(--textColorLight);">Sign up, Sign in, Card Management, Maintenance</p>
+          </div>
+        </div>
       </div>
+      <br>
       <br>
       <br>
       <div>
@@ -192,6 +211,13 @@
         <p class="text-center" style="padding:0 10%">
           As requested of using “Smile logo” for map markers, we came up a design of displaying smile logo as default and switching to detail map marker as user zoom in.
         </p>
+        <br>
+        <br>
+        <div class="row justify-content-center">
+          <div class="col-10 col-md-8 justify-content-center">
+            <img src="assets/img/yb/markers.png" style="width:100%">
+          </div>
+        </div>
       </div>
     </div>
     <br>
@@ -246,37 +272,37 @@
     <br>
     <div id="carousel">
       <div style="outline: none;">
-        <img class="" src="assets/img/yb/stationList.jpg" style="width: 100%; max-width:50vw; padding: 12px; outline: none;">
+        <img src="assets/img/yb/m-map.png" style="width: 100%; padding: 12px; outline: none;">
       </div>
       <div style="outline: none;">
-        <img class="" src="assets/img/yb/stationInfo.jpg" style="width: 100%; max-width:50vw; padding: 12px; outline: none;">
+        <img src="assets/img/yb/m-stationList.png" style="width: 100%; padding: 12px; outline: none;">
       </div>
       <div style="outline: none;">
-        <img class="" src="assets/img/yb/nav.jpg" style="width: 100%; max-width:50vw; padding: 12px; outline: none;">
+        <img src="assets/img/yb/m-stationInfo.png" style="width: 100%; padding: 12px; outline: none;">
       </div>
       <div style="outline: none;">
-        <img class="" src="assets/img/yb/news.jpg" style="width: 100%; max-width:50vw; padding: 12px; outline: none;">
+        <img src="assets/img/yb/m-nav.png" style="width: 100%; padding: 12px; outline: none;">
       </div>
       <div style="outline: none;">
-        <img class="" src="assets/img/yb/service.jpg" style="width: 100%; max-width:50vw; padding: 12px; outline: none;">
+        <img src="assets/img/yb/m-news.png" style="width: 100%; padding: 12px; outline: none;">
       </div>
       <div style="outline: none;">
-        <img class="" src="assets/img/yb/bike.jpg" style="width: 100%; max-width:50vw; padding: 12px; outline: none;">
+        <img src="assets/img/yb/m-service.png" style="width: 100%; padding: 12px; outline: none;">
       </div>
       <div style="outline: none;">
-        <img class="" src="assets/img/yb/safety.jpg" style="width: 100%; max-width:50vw; padding: 12px; outline: none;">
+        <img src="assets/img/yb/m-bike.png" style="width: 100%; padding: 12px; outline: none;">
       </div>
       <div style="outline: none;">
-        <img class="" src="assets/img/yb/signin.jpg" style="width: 100%; max-width:50vw; padding: 12px; outline: none;">
+        <img src="assets/img/yb/m-safety.png" style="width: 100%; padding: 12px; outline: none;">
       </div>
       <div style="outline: none;">
-        <img class="" src="assets/img/yb/signup1.jpg" style="width: 100%; max-width:50vw; padding: 12px; outline: none;">
+        <img src="assets/img/yb/m-signin.png" style="width: 100%; padding: 12px; outline: none;">
       </div>
       <div style="outline: none;">
-        <img class="" src="assets/img/yb/signup2.jpg" style="width: 100%; max-width:50vw; padding: 12px; outline: none;">
+        <img src="assets/img/yb/m-signup1.png" style="width: 100%; padding: 12px; outline: none;">
       </div>
       <div style="outline: none;">
-        <img class="" src="assets/img/yb/map.jpg" style="width: 100%; max-width:50vw; padding: 12px; outline: none;">
+        <img src="assets/img/yb/m-signup2.png" style="width: 100%; padding: 12px; outline: none;">
       </div>
     </div>
   </section>
@@ -326,23 +352,26 @@
   <script type="text/javascript">
     $('#carousel').slick({
       autoplay: true,
-      autoplaySpeed: 4000,
-      slidesToShow: 3,
+      autoplaySpeed: 2500,
+      slidesToShow: 4,
       swipeToSlide: true,
-      centerMode: true,
       arrows: false,
 
       responsive: [{
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          swipeToSlide: true
+        }
+      }, {
         breakpoint: 768,
         settings: {
-          centerMode: true,
           slidesToShow: 2,
           swipeToSlide: true
         }
       }, {
         breakpoint: 576,
         settings: {
-          centerMode: true,
           slidesToShow: 1,
           swipeToSlide: true
         }
