@@ -398,6 +398,11 @@ hr {
   color: var(--textColor)
 }
 
+.yb-product-img {
+  padding: 6vh 10vw;
+  max-width: 90vw;"
+}
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -499,5 +504,8 @@ hr {
   }
   .copyright {
     text-align: center;
+  }
+  .yb-product-img {
+    padding-bottom: 0;
   }
 }
