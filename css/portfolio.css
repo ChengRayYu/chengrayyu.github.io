@@ -11,7 +11,7 @@
   --borderColor: #EEEEEE;
   --accentColor: #5C0012;
   --textColor: #333333;
-  --textColorHover: #666666;
+  --textColorHover: #4F4F4F;
   --textColorLight: #999999;
   --linkedinThemeColor: #0077B5;
   --githubThemeColor: #333333;
@@ -45,6 +45,7 @@ body {
 }
 
 p, i {
+  color: var(--textColorHover);
   font-size: 15px;
   line-height: 1.5rem;
   font-weight: 300;
@@ -395,12 +396,17 @@ hr {
 }
 
 .project-detail-footer #top {
-  color: var(--textColor)
+  color: var(--textColor);
 }
 
-.yb-product-img {
-  padding: 6vh 10vw;
-  max-width: 90vw;"
+.project-detail-section {
+  color: var(--textColor);
+  font-weight: 600;
+}
+
+.project-detail-section-caption {
+  color: var(--textColor);
+  font-weight: 500;
 }
 
 .animated {
@@ -439,6 +445,10 @@ hr {
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: var(--textColorLight);
 }
 
 @media (max-width:991px) {
@@ -504,8 +514,5 @@ hr {
   }
   .copyright {
     text-align: center;
-  }
-  .yb-product-img {
-    padding-bottom: 0;
   }
 }
