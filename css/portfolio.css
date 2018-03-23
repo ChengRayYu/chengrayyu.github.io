@@ -60,7 +60,7 @@ p, i {
 
 blockquote {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--textColorHover);
   border-left: 5px solid var(--gray400);
   margin: 0;
@@ -401,7 +401,7 @@ hr {
 
 .project-detail-section {
   color: var(--textColor);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .project-detail-section-caption {
