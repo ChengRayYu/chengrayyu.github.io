@@ -258,8 +258,8 @@ hr {
   width: 100%;
   height: 100%;
   background-color: var(--gray500);
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
+  -webkit-filter: grayscale(0.75);
+  filter: grayscale(0.75);
   -webkit-transition: all var(--anchorHoverDuration) ease-in-out;
   -moz-transition: all var(--anchorHoverDuration) ease-in-out;
   -ms-transition: all var(--anchorHoverDuration) ease-in-out;
