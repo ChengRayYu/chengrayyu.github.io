@@ -379,7 +379,7 @@ hr {
 }
 
 .project-detail-header {
-  padding: 10vh 24vw;
+  padding: 10vh 22vw;
 }
 
 .project-detail-header a {
@@ -387,12 +387,12 @@ hr {
 }
 
 .project-detail-container {
-  padding: 10vh 24vw;
+  padding: 10vh 22vw;
 }
 
 .project-detail-footer {
   margin-top: 8vh;
-  padding: 0 24vw;
+  padding: 0 22vw;
 }
 
 .project-detail-footer #top {
