@@ -379,7 +379,7 @@ hr {
 }
 
 .project-detail-header {
-  padding: 10vh 16vw;
+  padding: 10vh 22vw;
 }
 
 .project-detail-header a {
@@ -387,12 +387,12 @@ hr {
 }
 
 .project-detail-container {
-  padding: 10vh 16vw;
+  padding: 10vh 22vw;
 }
 
 .project-detail-footer {
   margin-top: 8vh;
-  padding: 0 16vw;
+  padding: 0 22vw;
 }
 
 .project-detail-footer #top {
@@ -466,11 +466,11 @@ hr {
     font-size: 32px;
   }
   .project-detail-container, .project-detail-header {
-    padding: 10vh 10vw;
+    padding: 10vh 16vw;
   }
   .project-detail-footer {
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 16vw;
+    padding-right: 16vw;
   }
 }
 
@@ -498,11 +498,11 @@ hr {
     font-size: 14px;
   }
   .project-detail-container, .project-detail-header {
-    padding: 8vh 6vw;
+    padding: 8vh 8vw;
   }
   .project-detail-footer {
-    padding-left: 6vw;
-    padding-right: 6vw;
+    padding-left: 8vw;
+    padding-right: 8vw;
   }
 }
 
