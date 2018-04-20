@@ -186,6 +186,7 @@ blockquote {
 
 .showcase_youbike, .showcase_diary, .showcase_vleepo {
   z-index: -1;
+  opacity: 0;
 }
 
 .fadeIn {
