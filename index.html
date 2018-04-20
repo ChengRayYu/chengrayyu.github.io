@@ -36,7 +36,6 @@
 
 <body>
 
-  <!-- Sidebar -->
   <div class="sidebar">
     <div class="logo">
       <a class="logo-title" href="./index.html">
@@ -44,36 +43,35 @@
         <span class="logo-title-light">CHENG-JUI YU</span>
       </p>
     </div>
-
     <div class="menu">
       <nav class="nav d-flex flex-column">
-        <a class="nav-link menu-item" href="youbike.html">
+        <a id="anchor_youbike" class="nav-link menu-item" data-ref="youbike" href="youbike.html">
           <p class="menu-item-title text-uppercase">YouBike</p>
+          <p class="menu-item-subtitle text-uppercase">2016</p>
           <p class="menu-item-subtitle text-uppercase">
-            <span class="text-nowrap">2016 &nbsp;&#45;&nbsp; </span>
             <span class="text-nowrap">Product design / </span>
             <span class="text-nowrap">Development / </span>
             <span class="text-nowrap">iOS / </span>
             <span class="text-nowrap">Android</span>
           </p>
         </a>
-        <a class="nav-link menu-item" href="diary.html">
-          <p class="menu-item-title text-uppercase">Diary Study</p>
-          <p class="menu-item-subtitle text-uppercase">
-            <span class="text-nowrap">2017 &nbsp;&#45;&nbsp; </span>
-            <span class="text-nowrap">UX / </span>
-            <span class="text-nowrap">User Research</span>
-          </p>
-        </a>
-        <a class="nav-link menu-item" href="vleepo.html">
-          <p class="menu-item-title text-uppercase">Vleepo</p>
-          <p class="menu-item-subtitle text-uppercase">
-            <span class="text-nowrap">2018 &nbsp;&#45;&nbsp; </span>
-            <span class="text-nowrap">UX / </span>
-            <span class="text-nowrap">Design Sprint / </span>
-            <span class="text-nowrap">Prototype</span>
-          </p>
-        </a>
+      <a id="anchor_diary" class="nav-link menu-item" data-ref="diary" href="diary.html">
+        <p class="menu-item-title text-uppercase">Diary Study - Waiting Experience</p>
+        <p class="menu-item-subtitle text-uppercase">2017</p>
+        <p class="menu-item-subtitle text-uppercase">
+          <span class="text-nowrap">UX / </span>
+          <span class="text-nowrap">User Research</span>
+        </p>
+      </a>
+      <a id="anchor_vleepo" class="nav-link menu-item" data-ref="vleepo" href="vleepo.html">
+        <p class="menu-item-title text-uppercase">Vleepo</p>
+        <p class="menu-item-subtitle text-uppercase">2018</p>
+        <p class="menu-item-subtitle text-uppercase">
+          <span class="text-nowrap">UX / </span>
+          <span class="text-nowrap">Design Sprint / </span>
+          <span class="text-nowrap">Prototype</span>
+        </p>
+      </a>
       </nav>
     </div>
 
@@ -96,13 +94,10 @@
         </div>
       </div>
     </div>
-
   </div>
 
-  <!-- Hero-Wrapper -->
-  <div class="d-none d-lg-block section-wrapper">
-
-    <section class="section d-flex flex-column justify-content-center" style="height: 100vh" id=hero>
+  <div class="d-none d-md-block showcase-wrapper">
+    <div id="hero" class="showcase d-flex flex-column justify-content-center">
       <div class="hero-intro">
         <h1>
           <span class="hero-intro-title">Hi, I'm Ray</span>
@@ -115,81 +110,37 @@
           “Do the right things and do things right” is one of my lifetime mottoes which fuels me on the journey of striving user experience on the works I have been through. Currently study User Experience Design in Toronto.
         </p>
       </div>
-    </section>
-
-    <!-- <section class="section" id="YouBike">
-      <a class="project wow animated fadeInUp" href="youbike.html">
-        <div class="project-intro col-md-4">
-          <h1 class="project-intro-title">YouBike</h1>
-          <p class="project-intro-detail">Bike Sharing Application Redesign</p>
-        </div>
-        <div class="project-media col-md-8">
-          <div class="imgBackground-container" style="background-image: url('assets/img/yb/cover.png');"></div>
-        </div>
-      </a>
-    </section> -->
-
-    <!-- <section class="section" id="GroceryGateway">
-      <a class="project wow animated fadeInUp">
-        <div class="project-intro col-md-4">
-          <h1 class="project-intro-title">Grocery Gateway</h1>
-          <p class="project-intro-detail">Coming Soon</p>
-        </div>
-        <div class="project-media col-md-8">
-          <div class="imgBackground-container"></div>
-        </div>
-      </a>
-    </section> -->
-
-    <!-- <section class="section" id="DiaryStudy">
-      <a class="project wow animated fadeInUp" href="diary.html">
-        <div class="project-intro col-md-4">
-          <h1 class="project-intro-title">Diary Study</h1>
-          <p class="project-intro-detail">Waiting experience observation of young adults</p>
-        </div>
-        <div class="project-media col-md-8">
-          <div class="imgBackground-container" style="background-image: url('assets/img/diary/cover.jpg');">
-          </div>
-        </div>
-      </a>
-    </section> -->
-
-    <!-- <section class="section" id="Vleepo">
-      <a class="project wow animated fadeInUp" href="vleepo.html">
-        <div class="project-intro col-md-4">
-          <h1 class="project-intro-title">Vleepo</h1>
-          <p class="project-intro-detail">UX &nbsp; | &nbsp; Design Sprint &nbsp; | &nbsp; Prototype</p>
-        </div>
-        <div class="project-media col-md-8">
-          <div class="imgBackground-container" style="background-image: url('assets/img/vleepo/cover.png');"></div>
-        </div>
-      </a>
-    </section> -->
-
-    <!-- <section class="section" id="HumberSpa">
-      <a class="project wow animated fadeInUp">
-        <div class="project-intro col-md-4">
-          <h1 class="project-intro-title">HumberSpa</h1>
-          <p class="project-intro-detail">Coming Soon</p>
-        </div>
-        <div class="project-media col-md-8">
-          <div class="imgBackground-container"></div>
-        </div>
-      </a>
-    </section> -->
-
-    <!-- Footer -->
+    </div>
+    <div class="showcase image-container showcase_youbike" style="background-image: url('assets/img/yb/cover.png');"></div>
+    <div class="showcase image-container showcase_diary" style="background-image: url('assets/img/diary/cover.jpg');"></div>
+    <div class="showcase image-container showcase_vleepo" style="background-image: url('assets/img/vleepo/cover.png');"></div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-  <!-- WOW -->
-  <!-- <script src="js/wow.min.js"></script>
-  <script>
-    new WOW().init();
-  </script> -->
+  <script type="text/javascript">
+    /* switch image on hover through menu items */
+    $('.menu-item').hover(function() {
+      var ref = $(this).data('ref');
+      var preview = $('.showcase_' + ref);
+      if (preview.hasClass('fadeIn')) {
+        preview.removeClass('fadeIn')
+      } else {
+        preview.addClass('fadeIn');
+      }
+    });
+
+    /* hide hero section when hovering menu items */
+    $('.menu nav').hover(function() {
+      if ($('#hero').hasClass('fadeOut')) {
+        $('#hero').removeClass('fadeOut')
+      } else {
+        $('#hero').addClass('fadeOut');
+      }
+    })
+  </script>
 
 </body>
 
