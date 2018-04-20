@@ -279,8 +279,7 @@ blockquote {
 
 .footer-btns {
   display: flex;
-  justify-content: center;
-  margin-bottom: 12px;
+  justify-content: left;
 }
 
 .footer-btn {
@@ -327,6 +326,8 @@ blockquote {
   color: var(--textColorLight);
   font-size: 13px;
   font-weight: 300;
+line-height: 18px;
+  text-align: right;
 }
 
 .project-detail-header {
@@ -410,11 +411,6 @@ blockquote {
     padding-left: 16vw;
     padding-right: 16vw;
   }
-  .footer-btns {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 12px;
-  }
 }
 
 @media (max-width:767px) {
@@ -430,19 +426,6 @@ blockquote {
   .hero-intro-title-muted {
     font-size: 24px;
   }
-  .project {
-    flex-direction: column-reverse;
-  }
-  .project-intro {
-    margin-top: 20px;
-    padding: 0;
-  }
-  .project-intro-title {
-    font-size: 24px;
-  }
-  .project-intro-detail {
-    font-size: 14px;
-  }
   .project-detail-container, .project-detail-header {
     padding: 8vh 8vw;
   }
@@ -452,4 +435,13 @@ blockquote {
   }
 }
 
-@media (max-width:575px) {}
+@media (max-width:575px) {
+  .footer-btns {
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  .copyright {
+    text-align: center;
+  }
+
+}
