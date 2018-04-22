@@ -166,7 +166,6 @@ blockquote {
   top: 0;
   right: 0;
   bottom: 0;
-  /* margin-left: 50vw; */
   width: 50vw;
   height: 100vh;
 }
@@ -430,6 +429,9 @@ line-height: 18px;
 }
 
 @media (max-width:575px) {
+  .menu {
+    justify-content: start;
+  }
   .footer-btns {
     justify-content: center;
     margin-bottom: 12px;
