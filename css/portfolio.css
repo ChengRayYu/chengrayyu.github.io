@@ -188,7 +188,7 @@ blockquote {
   animation-fill-mode: both;
 }
 
-.showcase_youbike, .showcase_diary, .showcase_vleepo {
+.showcase_youbike, .showcase_diary, .showcase_vleepo, .showcase_spa {
   z-index: -1;
   opacity: 0;
 }
